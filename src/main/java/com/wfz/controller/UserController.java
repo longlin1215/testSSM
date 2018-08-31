@@ -104,8 +104,7 @@ public class UserController {
         log.info(user.toString());
         return new ResponseEntity<User>(user,HttpStatus.OK);  
     } 
-    
-    //�ļ��ϴ���
+
     @RequestMapping(value="/upload")
     public String showUploadPage(){
         return "file";
