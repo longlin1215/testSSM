@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator"
+	content="HTML Tidy for HTML5 for Windows version 5.2.0" />
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css" media="print">
+.v-h {
+	visibility: hidden;
+}
+
+.Noprint {
+	display: none;
+	height: 1cm
+}
+</style>
+<style type="text/css">
+body {
+	font-family: "黑体";
+	color: #333;
+	font-size: 12px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+}
+
+table tr td {
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.left {
+	border-left: 1px solid black;
+}
+
+.right {
+	border-right: 1px solid black;
+}
+
+.top {
+	border-top: 1px solid black;
+}
+
+.bottom {
+	border-bottom: 1px solid black;
+}
+</style>
+</head>
+<body>
+	<div
+		style="position: relative; width: 100%; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; padding-right: 0px;">
+		<table style="" class="left right top bottom">
+			<tr style="">
+				<td style="">
+					<table style="">
+						<tr>
+							<td style="" class="right bottom">
+								<table style="">
+									<tr>
+										<!--1：包裹条码：包裹号一维条码，6.3*2.5-->
+										<td style="height: 25mm; width: 63mm"><img style=""
+											src="file://$!{@bar:packageCode}" alt="" /></td>
+									</tr>
+									<tr style="">
+										<!--2：包裹号：由订单号+包裹序号，转外单包裹号字体加大，6.3*1.0，字18-->
+										<td
+											style="height: 10mm; width: 63mm; font-size: 18px; border: none; text-align: center">
+											<label>$!{packageNo}</label>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td style="">
+								<table style="">
+									<tr style="">
+										<!--3:派车单号：商品派车单号,2.2*0.4,字12-->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{dispatchNo}</td>
+										<!--4:月台：商品月台号,1.0*0.4,字12 -->
+										<td style="height: 4mm; width: 10mm; font-size: 12px"
+											class=" bottom">$!{dockNo}</td>
+									</tr>
+									<tr style="">
+										<!--5：是否开箱验机：自营没有，为空。外单根据sendpay判断是否显示,2.2*0.4,字12- -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{openCheck}&#160;</td>
+										<!--6：发票：普、电、无。全国已切换电子发票，均显示“电”，1*0.8，字14 -->
+										<td rowspan="2"
+											style="height: 4mm; width: 10mm; font-size: 18px"
+											class=" bottom">$!{invoice}</td>
+									</tr>
+									<tr style="">
+										<!--7:回收提货卡：自营没有，为空。外单根据sendpay判断是否显示,2.2*0.4,字12 -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{callBackTakeCard}&#160;</td>
+									</tr>
+									<tr style="">
+										<!--8:送装一体（配）、送装一体（安）。自营没有，为空。外单根据sendpay判断是否显示。 2.2*0.4,字12 -->
+										<!--未找到相应字段-->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{xxxx}&#160;</td>
+										<!--9:任务行拣货序号,1*0.8,字20 -->
+										<td rowspan="2"
+											style="height: 8mm; width: 10mm; font-size: 20px"
+											class=" bottom">$!{taskGroupPickSeq}</td>
+									</tr>
+									<tr style="">
+										<!--10:预留,2.2*0.4,字12 -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{extReserve}</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="">
+				<td style="">
+					<table style="">
+						<tr style="">
+							<!--11：承运商名称，编号,6.3*1.0,字18 -->
+							<td style="height: 10mm; width: 50mm; font-size: 18px"
+								class="right bottom">$!{carrierName} &#160
+								$!{carrierShortName}&#160;</td>
+							<td style="height: 4mm; width: 22mm; font-size: 12px"
+								class="right bottom">
+								<table style="">
+									<tr style="">
+										<!--3:派车单号：商品派车单号,2.2*0.4,字12-->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{dispatchNo}</td>
+									</tr>
+									<tr style="">
+										<!--5：是否开箱验机：自营没有，为空。外单根据sendpay判断是否显示,2.2*0.4,字12- -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{openCheck}&#160;</td>
+									</tr>
+									<tr style="">
+										<!--7:回收提货卡：自营没有，为空。外单根据sendpay判断是否显示,2.2*0.4,字12 -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{callBackTakeCard}&#160;</td>
+									</tr>
+									<tr style="">
+										<!--8:送装一体（配）、送装一体（安）。自营没有，为空。外单根据sendpay判断是否显示。 2.2*0.4,字12 -->
+										<!--未找到相应字段-->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{xxxx}&#160;</td>
+									</tr>
+									<tr style="">
+										<!--10:预留,2.2*0.4,字12 -->
+										<td style="height: 4mm; width: 22mm; font-size: 12px"
+											class="right bottom">$!{extReserve}</td>
+									</tr>
+								</table>
+							</td>
+							<!--1*1,字14-->
+							<td style="height: 10mm; width: 10mm; font-size: 14px"
+								class="bottom">
+								<table style="">
+									<tr style="">
+										<td rowspan="5"
+											style="height: 4mm; width: 10mm; font-size: 12px"
+											class=" bottom">
+											<table>
+												<tr style="">
+													<!--4:月台：商品月台号,1.0*0.4,字12 -->
+													<td style="height: 4mm; width: 10mm; font-size: 12px"
+														class=" bottom">$!{dockNo}</td>
+												</tr>
+												<tr style="">
+													<!--5：是否开箱验机：自营没有，为空。外单根据sendpay判断是否显示,2.2*0.4,字12- -->
+													<!--6：发票：普、电、无。全国已切换电子发票，均显示“电”，1*0.8，字14 -->
+													<td 
+														style="height: 4mm; width: 10mm; font-size: 18px"
+														class=" bottom">$!{invoice}</td>
+												</tr>
+												<tr style="">
+													<!--9:任务行拣货序号,1*0.8,字20 -->
+													<td 
+														style="height: 8mm; width: 10mm; font-size: 20px"
+														class=" bottom">$!{taskGroupPickSeq}</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr style="">
+				<td style="">
+					<table style="">
+						<tr style="">
+							<!--11：承运商名称，编号,6.3*1.0,字18 -->
+							<td rowspan="2"
+								style="height: 10mm; width: 50mm; font-size: 18px"
+								class="right bottom">$!{carrierName} &#160
+								$!{carrierShortName}&#160;</td>
+							<td style="height: 4mm; width: 22mm; font-size: 12px"
+								class="right bottom">应收金额</td>
+							<!--13:	包裹序号显示为0，1*1,字14-->
+							<td rowspan="2"
+								style="height: 10mm; width: 10mm; font-size: 14px"
+								class="bottom">$!{packageSeq}&#160;</td>
+						</tr>
+						<tr style="">
+							<!--12：	应收金额，货到付款金额，如在线支付，显示为0，2.2*0.6,字16-->
+							<td style="height: 6mm; width: 22mm; font-size: 16px"
+								class="right bottom">&#160;$!{amountReceivable}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="">
+				<!--14：	客户收货地址及收货人。收货人，0.6*1.0；地址，8.9*1.0，字12-->
+				<td style=''>
+					<table style="">
+						<tr>
+							<td style="width: 6mm; height: 10mm;" class="right bottom">
+								收货人</td>
+							<td
+								style="width: 89mm; height: 10mm; font-size: 12px; text-align: left;"
+								class=" bottom"><label>$!{customerAddress}</label></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="">
+				<td>
+					<table style="">
+						<tr style="">
+							<td style="">
+								<table style="">
+									<tr>
+										<td style="height: 6mm; text-align: left;" class="bottom">
+											客户签字：</td>
+										<td style="height: 6mm; text-align: right;" class="bottom">
+											请您确认包裹完好签收，并妥善保管签收联</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="">
+				<td style=''>
+					<table style="">
+						<tr>
+							<!--17:	催。客户前台点击催单，标签则打印催字。-->
+							<!--18：	订单类型：211、晚间211、次日达、隔日达、精准达、极速达等。字16粗。-->
+							<td
+								style="height: 13mm; width: 23mm; text-align: left; font-size: 16px; font-weight: bold"
+								class="right bottom">$!{催} $!{orderType}</td>
+							<!--19:	送货时间。一般订单精确到日；精准达订单精确到分钟。-->
+							<td
+								style="height: 13mm; width: 27mm; text-align: left; vertical-align: top"
+								class="right bottom">送货时间：<br /> $!{sendTime}
+							</td>
+							<!--20；订单号及条形码-->
+							<td style="width: 45mm; height: 13mm" class=" bottom"><img
+								style="width: 45mm; height: 13mm" src="file://$!{@bar:sourceNo}"
+								alt="" /><br /> <label>$!{sourceNo}</label></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="height: 0.5mm; font-size: 4px" class="bottom">
+					&#160;</td>
+			</tr>
+			<tr style="">
+				<!--21:	自营订单显示“京东家电小秘书”广告。外单显示商家信息（根据商家要求）-->
+				<td style="" class="bottom">
+					<table style="">
+						<tr>
+							<td rowspan="2" class="right"
+								style="text-align: center; vertical-align: center; width: 50mm; height: 23mm; font-size: 14px">
+								微信关注<br /> "京东家电小秘书"<br /> 畅享专属客户体验<br />
+							</td>
+							<!--22:	路区号-->
+							<td
+								style="width: 45mm; text-align: center; vertical-align: center; vertical-align: center; font-size: 72px">
+								$!{roadArea}</td>
+						</tr>
+						<tr>
+							<td
+								style="width: 45mm; height: 23mm; text-align: center; vertical-align: bottom; font-size: 12px">
+								京东订单号：$!{sourceNo}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="">
+				<td
+					style="width: 95mm; height: 15mm; vertical-align: top; text-align: left; font-family: 'Microsoft YaHei UI'; font-size: 12px;"
+					class="bottom">商品名称：$!{skuName}<br /> 商品编码：$!{skuCode}
+				</td>
+			</tr>
+			<tr style="">
+				<td style="width: 95mm; height: 5mm; text-align: left;"
+					class="bottom">备注:<span
+					style="border: 1px solid #000; background: transparent;">已验视</span>
+					$!{mark}
+				</td>
+			</tr>
+			<tr style="">
+				<td>
+					<table style="">
+						<tr>
+							<td style="height: 5mm; text-align: left; font-size: 10px;">
+								请您确认包裹完好签收，并妥善保管签收联</td>
+							<td style="height: 5mm; text-align: right;" class="right">
+								$!{printTime}</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
